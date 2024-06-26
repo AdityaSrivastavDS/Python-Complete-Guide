@@ -1,6 +1,6 @@
 # Python Complete Guide
 
-![Python Logo](py.png)
+![Python Logo](python.png)
 
 Welcome to the Python Complete Guide repository. This repository contains a comprehensive collection of Python tutorials and implementations covering various topics. Below is an overview of the folders and their contents.
 

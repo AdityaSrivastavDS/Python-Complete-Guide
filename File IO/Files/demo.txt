@@ -1,2 +1,1 @@
-Hii
-My name is Aditya Srivastav an aspiring Data Scientist.
+Javascript is used for backend development

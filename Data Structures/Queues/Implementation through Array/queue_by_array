@@ -1,0 +1,59 @@
+class ArrayQueue:
+    def __init__(self, max_size):
+        self.max_size = max_size  # Maximum size of the queue
+        self.queue = [None] * max_size  # Initialize an array of size max_size
+        self.front = 0  # Index of the front element
+        self.rear = -1  # Index of the rear element
+        self.current_size = 0  # Current number of elements in the queue
+
+    def enqueue(self, item):
+        if self.current_size >= self.max_size:
+            raise IndexError("Queue is full")
+        self.rear = (self.rear + 1) % self.max_size  # Circular increment of rear index
+        self.queue[self.rear] = item
+        self.current_size += 1
+
+    def dequeue(self):
+        if self.current_size == 0:
+            raise IndexError("Queue is empty")
+        item = self.queue[self.front]
+        self.queue[self.front] = None  # Remove the item from the queue
+        self.front = (self.front + 1) % self.max_size  # Circular increment of front index
+        self.current_size -= 1
+        return item
+
+    def peek(self):
+        if self.current_size == 0:
+            raise IndexError("Queue is empty")
+        return self.queue[self.front]
+
+    def is_empty(self):
+        return self.current_size == 0
+
+    def size(self):
+        return self.current_size
+
+
+# Creating a queue with maximum size 5
+queue = ArrayQueue(5)
+
+# Enqueue elements
+queue.enqueue(1)
+queue.enqueue(2)
+queue.enqueue(3)
+
+print("Queue size:", queue.size())  # Output: Queue size: 3
+
+# Peek at the front element
+print("Front element:", queue.peek())  # Output: Front element: 1
+
+# Dequeue elements
+print("Dequeue:", queue.dequeue())  # Output: Dequeue: 1
+print("Dequeue:", queue.dequeue())  # Output: Dequeue: 2
+
+print("Is queue empty?", queue.is_empty())  # Output: Is queue empty? False
+
+# Enqueue more elements
+queue.enqueue(4)
+queue.enqueue(5)
+queue.enqueue(6)  # This will raise an IndexError: Queue is full

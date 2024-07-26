@@ -1,6 +1,6 @@
 # Python Complete Guide
 
-![Python Logo](python.png)
+![Python Logo](https://img.icons8.com/?size=100&id=hGdCwhSHUe6L&format=png&color=000000)
 
 Welcome to the Python Complete Guide repository. This repository contains a comprehensive collection of Python tutorials and implementations covering various topics. Below is an overview of the folders and their contents.
 

@@ -80,4 +80,4 @@ A collection of datasets used in various tutorials and examples in this reposito
 
 ## 📜LICENSE
 
-The license file for this repository.
+Repository protected through [License](#license) and only for reasearch and educational purpose.
